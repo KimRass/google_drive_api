@@ -19,6 +19,8 @@ def get_args():
 
 
 def download_files(drive_service, save_dir, res):
+    save_dir = Path(save_dir)
+
     all_subdirs = res["folderTree"]
     dirid2dirname = {id:name for id, name in zip(all_subdirs["folders"], all_subdirs["names"])}
 
