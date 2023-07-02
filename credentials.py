@@ -3,7 +3,6 @@
 
 # `pip install google-auth-oauthlib`
 
-import json
 import os.path
 import pickle
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -32,5 +31,3 @@ def load_credentials():
         with open(pickle_path, mode="wb") as token:
             pickle.dump(creds, token)
     return creds
-
-load_credentials()
